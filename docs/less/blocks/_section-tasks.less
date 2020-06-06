@@ -1,0 +1,121 @@
+.tasks{
+    position: relative;
+    padding-top: 68px;
+    padding-bottom: 43px;
+    background-color: white;
+    overflow: hidden;
+
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+               
+        width: 68px;
+        height: 68px;
+        background-color: #a4eecb;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    // Планшет
+    @media (min-width: 768px){
+        padding-top: 65px;
+        padding-bottom: 39px;
+        &::before{
+            display: none;
+        }
+    }
+    
+    // Десктоп
+    @media (min-width: 1200px){
+        padding-top: 90px;
+        padding-bottom: 19px;
+
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 37%;
+            left: -9%;
+        
+            width: 190px;
+            height: 190px;
+            background-color: #a4eecb;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+ 
+.tasks-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+        
+    // Планшет
+    @media (min-width: 768px){
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+    
+    // Десктоп
+    @media (min-width: 1200px){
+    flex-direction: unset;
+    align-items: center;
+    }
+}
+
+.tasks-content_column{
+    text-align: center;
+
+    // Планшет
+    @media (min-width: 768px){
+        padding-top: 16px;
+        width: 55%;
+        text-align: left;
+    }
+    
+    // Десктоп
+    @media (min-width: 1200px){
+        width: 50%;
+        padding-left: 103px;
+        padding-top: 0px;
+        align-items: center;
+    }
+}
+
+
+.task-text{
+    margin-bottom: 56px;
+    
+     // Планшет
+     @media (min-width: 768px){
+        margin-bottom: 0;
+        width: 380px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px){
+        width: 445px;
+    }
+}
+
+.tasks-img{
+    margin: 0 auto;
+    width: 200px;
+   
+    // Планшет
+    @media (min-width: 768px){
+        margin-right: 30px;
+        width: 270px;
+    }
+    
+    // Десктоп
+    @media (min-width: 1200px){
+        width: 50%;
+        padding-left: 96px;
+        align-items: center;
+    }
+}
